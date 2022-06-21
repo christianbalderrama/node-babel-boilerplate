@@ -1,0 +1,21 @@
+{
+  "name": "node-babel-boilerplate",
+  "version": "1.0.0",
+  "description": "This is a sample node-babel boilerplate with Async/Await/Promises support",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/babel src --out-dir lib && node ./lib/index"
+  },
+  "keywords": [],
+  "author": "Christian Balderrama",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2"
+  },
+  "dependencies": {
+    "core-js": "^3.23.2"
+  }
+}
