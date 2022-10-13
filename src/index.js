@@ -1,20 +1,12 @@
-async function testAwait() {
-  const test = await new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(console.log('This is an example async/await and Promises which means this boilerplate handles it as well')); //eslint-disable-line
-    }, 1000);
-  });
+import * as dotenv from "dotenv";
+import express from "express";
+dotenv.config();
 
-  return test;
-}
+const app = express();
+const PORT = process.env.PORT || 3000
 
-(() => {
-  console.log('I will log first'); //eslint-disable-line
-})();
+app.get('/', (req, res) => {
+  return res.send("Hello, World!");
+});
 
-let x = '';
-
-(async () => {
-  await testAwait();
-  console.log('HELLo'); //eslint-disable-line
-})();
+app.listen(PORT, () => console.log(`Server is now listening to port: ${PORT}`));
